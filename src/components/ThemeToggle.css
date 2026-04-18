@@ -1,0 +1,67 @@
+.theme-toggle {
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle__track {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  position: relative;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.theme-toggle:hover .theme-toggle__track {
+  border-color: var(--color-accent);
+  background: var(--color-surface-hover);
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-normal) var(--ease-out);
+  color: var(--color-text-inverse);
+}
+
+.theme-toggle__thumb--dark {
+  left: calc(100% - 23px);
+}
+
+.theme-toggle__icon {
+  position: absolute;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.theme-toggle__icon--sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.theme-toggle__thumb--dark .theme-toggle__icon--sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+
+.theme-toggle__icon--moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
+
+.theme-toggle__thumb--dark .theme-toggle__icon--moon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}

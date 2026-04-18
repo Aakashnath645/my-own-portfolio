@@ -1,0 +1,197 @@
+.contact {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.contact__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.contact__content.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact__content .section-label {
+  justify-content: center;
+}
+
+.contact__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+  max-width: 700px;
+}
+
+.contact__title-accent {
+  font-family: var(--font-accent);
+  color: var(--color-accent);
+  font-style: italic;
+  font-weight: var(--fw-medium);
+  font-size: 1.1em;
+}
+
+.contact__subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  max-width: 550px;
+  margin-bottom: var(--space-3xl);
+}
+
+/* Contact info blocks */
+.contact__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  width: 100%;
+  max-width: 480px;
+}
+
+.contact__info-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-normal) var(--ease-out);
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.contact__info-btn:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.contact__info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.contact__info-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact__info-value {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+}
+
+.contact__info-hint {
+  font-size: var(--fs-xs);
+  color: var(--color-text-tertiary);
+}
+
+.contact__info-action {
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+/* Social links */
+.contact__links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.7rem 1.3rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.contact__link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__link-icon {
+  display: flex;
+  align-items: center;
+}
+
+.contact__link-arrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.contact__link:hover .contact__link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact__blocks {
+    max-width: 100%;
+  }
+
+  .contact__links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact__link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__info-btn {
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-sm);
+  }
+
+  .contact__info-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact__info-value {
+    font-size: var(--fs-small);
+  }
+}
+
