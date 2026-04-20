@@ -18,7 +18,7 @@ export const projects = [
     description:
       "Built a real-time geospatial dashboard using React 19, TypeScript, and Leaflet for global seismic tracking. Integrated Google Gemini AI for automated situational analysis and critical infrastructure mapping. Engineered a robust data layer to normalize and render sub-second telemetry from USGS and NOAA APIs. Features proximity alerts and interactive tectonic plate overlays.",
     tech: ["React 19", "TypeScript", "Tailwind CSS", "Leaflet", "Google GenAI SDK"],
-    github: "https://github.com/Aakashnath645/Sentinel---Planetary-Surveillance-Network",
+    github: "https://github.com/Aakashnath645/Sentinel",
     live: "https://sentinel-planetary-surveillance-network-401832542794.us-west1.run.app/",
     category: "AI / Geospatial",
     accent: "#c4956a",
