@@ -230,6 +230,18 @@
     padding-top: 60px;
   }
 
+  /* Performance optimization for mobile */
+  .hero__grain {
+    animation: none;
+    opacity: 0.015;
+  }
+
+  .hero__gradient-orb {
+    filter: blur(40px); /* Reduced blur for mobile GPU */
+    animation: none; /* Disable JS-heavy float animations */
+    will-change: transform;
+  }
+
   .hero__gradient-orb--1 {
     width: 300px;
     height: 300px;
@@ -277,6 +289,10 @@
   .hero__eyebrow {
     font-size: var(--fs-xs);
     padding: 0.35rem 0.8rem 0.35rem 0.5rem;
+  }
+
+  .hero__gradient-orb {
+    filter: blur(30px);
   }
 }
 

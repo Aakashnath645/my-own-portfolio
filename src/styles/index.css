@@ -395,6 +395,7 @@ ul, ol {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  will-change: opacity, transform;
 }
 
 .reveal.revealed {
