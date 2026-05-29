@@ -148,7 +148,7 @@ export const resumeClassifier = {
 export const education = {
   degree: "B.Tech in Computer Science & Engineering (IoT, CS, BT)",
   school: "University of Engineering & Management, Kolkata",
-  period: "Graduated: June 2025",
+  period: "Graduated: May 2025",
   cgpa: "8.36 / 10.00",
 };
 
